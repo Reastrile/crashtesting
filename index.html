@@ -1,10 +1,21 @@
 <html>
   <body>
-    <button type="button" onclick="crashR();"> Crash </button>
+    <button type="button" onclick="crashA();"> Crash A </button>
+    <br>
+    <button type="button" onclick="crashB();"> Crash B </button>
+    <br>
+    <button type="button" onclick="crashC();"> Crash C </button>
+    <br>
+    <button type="button" onclick="crashD();"> Crash D </button>
+    <br>
+    <button type="button" onclick="crashE();"> Crash E </button>
     <p id="crash"></p>
     <script>
-      function crash() {var A = []; while (true) {A.push(1);}}
-      function crashR() {while (true) {console.log(1);}}
+      function crashA() {var A = []; while (true) {A.push(1);}}
+      function crashB() {while (true) {console.log(1);}}
+      function crashC() {var a = 2; while (true) {a = a * 1.1; console.log(a);}}
+      function crashD() {var a = 2; A = []; while (true) {a = a * 1.1; A.push(a); console.log(A.join(''));}}
+      function crashE() {var a = 2; A = []; while (true) {a = a * 1.1; A.push(a);} console.log(A)}
     </script>
   </body>
 </html>
