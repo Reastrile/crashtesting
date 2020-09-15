@@ -1,8 +1,9 @@
 <html>
   <body>
     <button type="button" onclick="crash();"> Crash </button>
+    <p id="crash"></p>
     <script>
-      function crash() {var A = []; while (true) {A.push(1); alert(A);}}
+      function crash() {var A = []; while (true) {A.push(1); document.getElementById("crash").innerHTML = A;}}
     </script>
   </body>
 </html>
